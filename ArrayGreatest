@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class ArrayGreatest {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);  // creating the scanner class
+        int[] a=new int[15]; // ctreating object
+        System.out.println("enter 15 numbers");
+        for(int i=0 ; i<15 ; i++){
+            System.out.println("number" + (i+1)+"");
+            a[i]=sc.nextInt();
+        }
+        int greatest= a[0];
+        // finding the greatest number
+        for(int i=0 ; i<15 ; i++){
+
+            if(a[i]>greatest){
+                greatest= a[i];
+            }
+        }
+        System.out.println("the greatest number is:"+greatest);
+    }
+}
