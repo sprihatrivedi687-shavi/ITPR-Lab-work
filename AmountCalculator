@@ -1,0 +1,28 @@
+  import java.util.Scanner; //importing package
+public class AmountCalculator { //method declaration
+    public static float calculateInterest(float p, float r, int t){
+        float si=((p*r*t)/100); // simple interest
+        return si;
+    }
+     // creating main method
+     public static void main(String[] args) {
+        float principal , rate;
+        int time;
+        Scanner sc=new Scanner(System.in); //creation of scanner class
+        System.out.println("Enter principal(in Rs):");
+        System.out.println("Enter rate(in %):");
+        System.out.println("Enter time(in years)");
+        principal=sc.nextFloat();
+        rate=sc.nextFloat();
+        time=sc.nextInt();
+        float simple= calculateInterest(principal, rate, time); //method calling
+        float amount= principal + simple; // amount calculation
+         // displaying numbers
+        System.out.println("Principal: Rs"+principal);
+        System.out.println("Rate:"+rate+"%");
+        System.out.println("Time:"+time+"year");
+        System.out.println("Simple Interest:Rs"+simple);
+        System.out.println("Amount:Rs"+amount); 
+     }
+}
+
