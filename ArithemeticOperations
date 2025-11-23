@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ArithmeticOperations {
+    public static int addition(int a , int b){
+        return a+b; //addition of two numbers
+    }
+    public  static int subtraction(int a , int b){
+        return a-b; //subtraction of two numbers
+        
+    }
+    public static int multiplication(int a , int b){
+        return a*b; //product of two numbers
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);  //creating the scanner class
+        System.out.println("Enter two numbers");
+        int c=sc.nextInt(); //first number
+        int d=sc.nextInt(); //second number
+         //displaying the result
+        System.out.println("Addition of two numbers="+addition(c, d));
+        System.out.println("Subtraction of two numbers="+subtraction(c, d));
+        System.out.println("Product of two numbers="+multiplication(c, d));
+    }
+}
+
+
