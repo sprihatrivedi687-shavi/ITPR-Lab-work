@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class SimpleInterest {
+        //method for calculating simple interest
+        public static void calculateSimpleInterest(float p,float r, int t){
+            //calculating simple interest
+            float si=((p*r*t)/100);
+            //displaying the result
+            System.out.println("Simple Interest=Rs"+si);
+        }
+        //main method
+        public static void main(String[] args){
+            float principal; // to store principal
+            float rate; //to store rate
+            int time; //to store time
+            //creating object of scanner class for input
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter principal(in Rs):");
+            principal=sc.nextFloat();
+            System.out.print("Enter rate(in %):");
+            rate=sc.nextFloat();
+            System.out.print("Enter time(in year):");
+            time=sc.nextInt();
+            sc.close(); // closing scanner object to avoid resource leak
+            //displaying data
+            System.out.println("Principal=Rs"+principal);
+            System.out.println("Rate="+rate+"%");
+            System.out.println("Time="+time+"year");
+            //calling the method for calculating simple interest
+            calculateSimpleInterest(principal, rate, time);
+        }
+    }
+
