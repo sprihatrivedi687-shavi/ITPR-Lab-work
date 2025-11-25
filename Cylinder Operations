@@ -1,0 +1,15 @@
+import java.util.Scanner;
+ public class CylinderOperations {
+        public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in); //creating the scanner class
+            System.out.println("Enter radius and height in cm:");
+            double r=sc.nextDouble(); //radius of the cylinder
+            double h=sc.nextDouble(); //height of the cylinder
+            //calculating the curved surface area and total surface area
+            double csa= 2*Math.PI*r*(r+h);
+            double tsa= 2*Math.PI*r*h;
+            //displaying the result
+            System.out.println("Curved Surface Area of the cylinder="+csa+"cm2");
+            System.out.println("Total Surface Area of the cylinder="+tsa+"cm2");
+        }
+    }
