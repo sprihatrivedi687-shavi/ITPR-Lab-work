@@ -1,0 +1,38 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+public class ExceptionProgram {
+        public static void main(String[] args) {
+            float num1,num2;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter any two number : ");
+            try
+            {
+                num1 = sc.nextInt();
+                num2 = sc.nextInt();
+                System.out.println("------------------------------");
+                System.out.println("First No. : "+num1);
+                System.out.println("Second No. : "+num2);
+                System.out.println("On Dividing "+num1+" by "+num2);
+                System.out.println("Quotient : "+(num1/num2));
+            }
+            catch(InputMismatchException obj)
+            {
+                System.out.println("Exception occurred : "+obj);
+            }
+            catch (ArithmeticException e)
+            {
+                System.out.println("Exception occurred : "+e);
+            }
+            catch (Exception e)
+            {
+                System.out.println("Exception occurred : "+e);
+            }
+            finally
+            {
+                //code which is mandatory for execution
+                sc.close();
+            }
+            System.out.println("-----------------------------------");
+        }
+    }
+
