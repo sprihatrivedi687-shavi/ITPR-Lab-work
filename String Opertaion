@@ -1,0 +1,34 @@
+import java.util.Scanner;//importing Scanner class for user input
+public class StringOperation {
+        public static void main(String[] args)
+        {
+            //creating object of Scanner class for user input
+            Scanner sc=new Scanner(System.in);
+
+            System.out.println("Enter any sentence : ");
+            String sentence = sc.nextLine();
+
+            String inverted ="";
+            char ch;
+            for(int index = 0;index < sentence.length();index++)
+            {
+                ch = sentence.charAt(index);//extracting character
+                if(ch >= 'A' && ch <= 'Z')
+                {
+                    ch = (char)(ch +32); //converting uppercase to lowercase
+                }
+                else if(ch >='a' && ch <= 'z')
+                {
+                    ch = (char)(ch -32); //converting lowercase to uppercase
+                }
+
+                //concating ch to inverted string object
+                inverted = inverted + ch;
+            }
+
+            System.out.println("------------------------------------------------------");
+            System.out.println("Stringe in inverted case : \n"+inverted);
+
+        }
+
+    }
