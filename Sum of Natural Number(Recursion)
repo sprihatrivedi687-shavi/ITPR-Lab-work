@@ -1,0 +1,20 @@
+import java.util.Scanner; //importing package
+public class NaturalNumber {
+        public static int naturalSum(int n){ // method declaration
+            if(n==1){
+                return 1; // base code
+            }
+            else{
+                return(n + naturalSum(n-1));  // recursive code
+            }
+        }
+        // creating main method
+        public static void main(String[] args) {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter a number");
+            int num=sc.nextInt();
+            int result= naturalSum(num); //method calling
+            System.out.println("Sum is:"+result);
+        }
+    }
+
