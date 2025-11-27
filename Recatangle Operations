@@ -1,0 +1,54 @@
+import java.util.Scanner;
+/// /defining a class for rectangle
+class Rectangle
+    {
+        //member variable
+        private float length,breadth;
+        //Constructor
+        Rectangle()
+        {
+            //creating object of scanner class
+            Scanner sc = new Scanner(System.in);
+            //input of length
+            System.out.print("Enter length of rectangle(in cm) : ");
+            length = sc.nextFloat();
+            //input of breadth
+            System.out.print("Enter breadth of rectangle(in cm) : ");
+            breadth = sc.nextFloat();
+        }
+        //method for displaying data
+        public void displaData()
+        {
+            System.out.println("----------------------------------------------");
+            System.out.println("-------- Rectangle -------");
+            System.out.println("Length : "+length+" cm");
+            System.out.println("Breadth : "+breadth+" cm");
+            //calculating area
+            calculatePerimeter();
+            //calculating perimeter
+            calculateArea();
+        }
+        //method for calculating area
+        private void calculateArea()
+        {
+            float area = length * breadth;
+            System.out.println("Area : "+area+" sq.cm");
+        }
+        //method for calculating perimeter
+        private void calculatePerimeter()
+        {
+            float perimeter = 2 * (length + breadth);
+            System.out.println("Perimeter : "+perimeter+" cm");
+        }
+    }
+//initial class
+public class RectangleOperations {
+
+        public static void main(String[] args) {
+            //creating object of Rectangle class
+            Rectangle rect = new Rectangle();
+            //rect.inputData();
+            rect.displaData();
+        }
+    }
+
