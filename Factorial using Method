@@ -1,0 +1,33 @@
+import java.util.Scanner;
+//creating class
+public class Factorial {
+        //method for calculating factorial
+        public static long calculateFactorial(int n){
+            //calculating factorial
+            long fact=1;
+            for(int i=1; i<=n; i++){
+                fact*=i; //factorial
+
+            }
+            //return factorial
+            return fact;
+        }
+        //creating main method
+        public static void main(String[]args){
+            Scanner sc=new Scanner(System.in);
+            System.out.print("Enter a number");
+            int num=sc.nextInt();
+            //check for positive and negative numbers
+            if (num<0) {
+                System.out.println("Factorial of negative numbers cannot be calculated ");
+            }
+            else if(num==0){
+                System.out.println("Factorial of 0 is: 1");
+            }
+            else{
+                long result=calculateFactorial(num);
+                System.out.println("Factorial:"+result);
+            }
+        }
+    }
+
