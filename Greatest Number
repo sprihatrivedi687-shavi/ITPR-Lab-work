@@ -1,0 +1,30 @@
+import java.util.Scanner;//importing scanner class
+public class GraetestNumber {
+    //recursive method for calculating greatest number
+    public static void greatestNumber(int a,int b){
+        if(a>b){
+            System.out.println(a+ "is the greatest number");
+        }
+        else if(b>a){
+            System.out.println(b+ "is the greatest number");
+        }
+        else if(a==b){
+            System.out.println("Both numbers are equal");
+        }
+        else{
+            System.out.println("Enter correct number");
+        }
+    }
+    // creating main method
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter two numbers");
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        // displaying numbers
+        System.out.println("First number:"+x);
+        System.out.println("Second number:"+y);
+        // calling the method for calculating greatest number
+        greatestNumber(x, y);
+    }
+}
