@@ -1,0 +1,30 @@
+import java.util.Scanner;//importing scanner class for input
+class FactorialCalculation{
+    //Recursive method for Calculating Factorial
+    public static long fact(int n){
+        if(n<0){
+            return -1;//special case for negative numbers
+        }
+        else if(n==0||n==1){
+            return 1;
+        }
+        else{
+            return n*fact(n-1);
+        }
+    }
+    //main method
+    public static void main(String[]args){
+        //Creating object of  Scanner class
+        int num;
+        Scanner sc=new Scanner(System.in);
+        num=sc.nextInt();//Reading user input
+        sc.close();
+        long fact=fact(num);
+        if (fact==-1){
+            System.out.println("Invalid Input");
+        }
+        else{
+            System.out.println("Factorial:"+fact);
+        }
+    }
+}
