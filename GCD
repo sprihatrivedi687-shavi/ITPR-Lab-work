@@ -1,0 +1,30 @@
+mport java.util.Scanner;
+public class GCDRecursion {
+    // Recursive method to find GCD
+        static int findGCD(int a, int b) {
+            if (b == 0)
+                return a; // base case
+            else
+                return findGCD(b, a % b); // recursive case
+        }
+        // creating main method
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            // Input two numbers
+            System.out.print("Enter first number: ");
+            int num1 = sc.nextInt();
+
+            System.out.print("Enter second number: ");
+            int num2 = sc.nextInt();
+
+            // Call recursive method
+            int hcf = findGCD(num1, num2);
+
+            // Display result
+            System.out.println("GCD of " + num1 + " and " + num2 + " is: " + hcf);
+
+            sc.close();
+        }
+    }
+
